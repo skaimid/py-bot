@@ -20,5 +20,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.nonebot]
 plugin_dirs = ["src/plugins"]
-plugins = ["nonebot_plugin_fortune", "nonebot_bison", "nonebot-plugin-crazy-thursday"]
+plugins = ["nonebot_plugin_fortune", "nonebot_bison", "nonebot_plugin_crazy_thursday"]
 builtin_plugins = ["echo", "single_session"]

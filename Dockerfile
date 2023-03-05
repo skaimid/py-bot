@@ -14,6 +14,8 @@ RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 FROM python:3.10
 
+RUN   apt-get update && apt-get install -y fonts-wqy-microhei chromium
+
 WORKDIR /app
 
 COPY --from=requirements-stage /tmp/requirements.txt /app/requirements.txt
