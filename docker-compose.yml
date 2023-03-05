@@ -2,3 +2,12 @@ version: "3"
 services:
   nonebot:
     image: skaimid/py-bot-nonebot:latest
+    ports:
+      - "8100:8100" # 映射端口到宿主机 宿主机端口:容器端口
+    env_file:
+      - ".env.prod" # fastapi 使用的环境变量文件
+    environment:
+      - ENVIRONMENT=prod
+      - APP_MODULE=main:app
+      - MAX_WORKERS=1
+    network_mode: bridge

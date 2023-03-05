@@ -3,8 +3,8 @@
 on:
   workflow_dispatch:
   push:
-    branches:
-      - 'master'
+    tags:
+      - "v*"
 
 jobs:
   docker:
@@ -19,6 +19,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: skaimid/py-bot-nonebot
+          tags: |
+            type=semver,pattern={{version}}
+            type=sha
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
