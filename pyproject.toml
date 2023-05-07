@@ -10,12 +10,7 @@ packages = [{include = "py_bot"}]
 python = "^3.10"
 nonebot2 = {extras = ["fastapi"], version = "^2.0.0rc3"}
 nonebot-adapter-onebot = "^2.2.1"
-nonebot-plugin-fortune = "^0.4.10.post1"
-nonebot-bison = "^0.7.0"
-nonebot-plugin-crazy-thursday = "^0.2.6"
-nonebot-plugin-chatgpt = "^0.7.4"
-nonebot-plugin-localstore = "^0.4.1"
-nonebot-plugin-chatgpt-on-qq = "^0.6.2"
+nonebot-plugin-tuan-chatgpt = "^0.3.1"
 
 [build-system]
 requires = ["poetry-core"]
@@ -23,5 +18,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.nonebot]
 plugin_dirs = ["src/plugins"]
-plugins = ["nonebot_plugin_fortune", "nonebot_bison", "nonebot_plugin_crazy_thursday", "nonebot_plugin_chatgpt_on_qq", "nonebot_plugin_localstore"]
+plugins = ["nonebot_plugin_tuan_chatgpt"]
 builtin_plugins = ["echo", "single_session"]
